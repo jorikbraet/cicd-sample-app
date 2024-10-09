@@ -1,6 +1,11 @@
 #!/bin/bash
 set -euo pipefail
 
+# fix voor tempdir error
+if [ -d "tempdir" ]; then
+    rm -rf tempdir
+fi
+
 mkdir tempdir
 mkdir tempdir/templates
 mkdir tempdir/static
